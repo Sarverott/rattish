@@ -74,29 +74,29 @@ simple and easy language used for input macros creation and payloads writing
   #winkey-r-cmdexe.rat
   ```
 
-### <del>command 0x24 ( ` $ ` )</del>
+### ~~command 0x24~~ ( ` $ ` )
   > *CURRENTLY NOT USED*
   - planned current variable pointing eg. $THAT - now every var operation we do with var THAT
 
-### command 0x25 ( ` % ` )
+### ~~command 0x25~~ ( ` % ` )
   > *CURRENTLY NOT USED*
   
-### command 0x26 ( ` & ` )
+### ~~command 0x26~~ ( ` & ` )
   > *CURRENTLY NOT USED*
 
-### command 0x27 ( ` ' ` )
+### ~~command 0x27~~ ( ` ' ` )
   > *CURRENTLY NOT USED*
 
-### command 0x28 ( ` ( ` )
+### ~~command 0x28~~ ( ` ( ` )
   > *CURRENTLY NOT USED*
 
-### command 0x29 ( ` ) ` )
+### ~~command 0x29~~ ( ` ) ` )
   > *CURRENTLY NOT USED*
 
-### command 0x2A ( ` * ` )
+### ~~command 0x2A~~ ( ` * ` )
   > *CURRENTLY NOT USED*
 
-### command 0x2B ( ` + ` )
+### ~~command 0x2B~~ ( ` + ` )
   > *CURRENTLY NOT USED*
 
 ### command 0x2C ( ` , ` )
@@ -108,7 +108,7 @@ simple and easy language used for input macros creation and payloads writing
   ,
   ```
 
-### command 0x2D ( ` - ` )
+### ~~command 0x2D~~ ( ` - ` )
   > *CURRENTLY NOT USED*
 
 ### command 0x2E ( ` . ` )
@@ -124,7 +124,7 @@ simple and easy language used for input macros creation and payloads writing
    ,
   ```
 
-### command 0x2F ( ` / ` )
+### ~~command 0x2F~~ ( ` / ` )
   > *CURRENTLY NOT USED*
 
 ### commentary 0x40 ( ` @ ` )
