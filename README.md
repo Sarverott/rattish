@@ -61,8 +61,8 @@ simple and easy language used for input macros creation and payloads writing
 - [set context variable](./command-list/0x3d.md) [ `=` ]
 - [add to context variable](./command-list/0x2b.md) [ `+` ]
 - [sub from context variable](./command-list/0x2d.md) [ `-` ]
-- [add to context variable](./command-list/0x2b.md) [ `+` ]
-- [sub from context variable](./command-list/0x2d.md) [ `-` ]
+- [multiply context variable](./command-list/0x2a.md) [ `*` ]
+- [divide context variable](./command-list/0x3a.md) [ `:` ]
 - [copy value from context variable to variable](./command-list/0x7d.md) [ `}` ]
 - [copy value from variable to context variable](./command-list/0x7b.md) [ `{` ]
 ###### LOGICS
