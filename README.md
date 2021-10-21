@@ -36,6 +36,10 @@ simple and easy language used for input macros creation and payloads writing
 
 ```
 
+***
+
+### IDEA OF PROJECT
+Project is created for macro codes in standard office software, microcontroller-based project's payloads and standalone scripting. First idea was based on small and fast program for Seeeduino Xiao with microsd to sd card adapter directly attached to SPI pins. After proof-of-work construction and programming was finished successfully, many new ideas appears.
 
 ***
 
@@ -82,3 +86,9 @@ simple and easy language used for input macros creation and payloads writing
 - [import code from file](./command-list/0x40.md) [ `@` ]
 - [setup enviroment and global switches](./command-list/0x22.md) [ `"` ]
 - [debug echo](./command-list/0x27.md) [ `'` ]
+
+***
+
+### INTERPRETERS AND RELATED PROJECTS
+
+- HID-RAT-KEY: badUSB HID keyboard interpreter with rattish scripting implementation (https://github.com/Sarverott/hid-rat-key)
