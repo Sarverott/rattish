@@ -91,4 +91,4 @@ Project is created for macro codes in standard office software, microcontroller-
 
 ### INTERPRETERS AND RELATED PROJECTS
 
-- HID-RAT-KEY: badUSB HID keyboard interpreter with rattish scripting implementation (https://github.com/Sarverott/hid-rat-key)
+- __HID-RAT-KEY__: badUSB HID keyboard interpreter with rattish scripting implementation (https://github.com/Sarverott/hid-rat-key)
