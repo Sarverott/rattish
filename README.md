@@ -1,4 +1,4 @@
-# rattish-language
+# rattish-manuals
 simple and easy language used for input macros creation and payloads writing
 
 ```                                                                               
