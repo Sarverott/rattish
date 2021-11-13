@@ -54,13 +54,13 @@ Project is created for macro codes in standard office software, microcontroller-
 
 ### COMMANDS LIST
 - [commentary](./command-list/0x23.md) [ `#` ]
-###### BASIC
+###### BASIC namespace
 - [print output](./command-list/0x3c.md) [ `<` ]
 - [read input](./command-list/0x3e.md) [ `>` ]
 - [wait time pause](./command-list/0x2e.md) [ `.` ]
 - [press key(s)](./command-list/0x5f.md) [ `_` ]
 - [release key(s)](./command-list/0x5e.md) [ `^` ]
-###### VARIABLES
+###### VARIABLES namespace
 - [point context on variable](./command-list/0x24.md) [ `$` ]
 - [set context variable](./command-list/0x3d.md) [ `=` ]
 - [add to context variable](./command-list/0x2b.md) [ `+` ]
@@ -69,20 +69,20 @@ Project is created for macro codes in standard office software, microcontroller-
 - [divide context variable](./command-list/0x3a.md) [ `:` ]
 - [copy value from context variable to variable](./command-list/0x7d.md) [ `}` ]
 - [copy value from variable to context variable](./command-list/0x7b.md) [ `{` ]
-###### LOGICS
+###### LOGICS namespace
 - [set 1 to context variable if context variable is greater than variable, else 0](./command-list/0x5c.md) [ `\` ]
 - [set 1 to context variable if context variable is lesser than variable, else 0](./command-list/0x2f.md) [ `/` ]
 - [set 1 to context variable if context variable is equal to variable, else 0](./command-list/0x7c.md) [ `|` ]
 - [set 1 to context variable if context variable or variable is not 0, else 0](./command-list/0x3b.md) [ `;` ]
 - [set 1 to context variable if context variable and variable is not 0, else 0](./command-list/0x26.md) [ `&` ]
 - [if context variable is 0 set 1, else 0](./command-list/0x7e.md) [ `~` ]
-###### PROCEDURES
+###### PROCEDURES namespace
 - [begin procedure declaration](./command-list/0x5b.md) [ `[` ]
 - [end procedure declaration](./command-list/0x5d.md) [ `]` ]
 - [call procedure](./command-list/0x25.md) [ `%` ]
 - [begin condition block of code, based on if context variable is 1](./command-list/0x3f.md) [ `?` ]
 - [end conditional block](./command-list/0x21.md) [ `!` ]
-###### MECHANICS
+###### MECHANICS namespace
 - [import code from file](./command-list/0x40.md) [ `@` ]
 - [setup enviroment and global switches](./command-list/0x22.md) [ `"` ]
 - [debug echo](./command-list/0x27.md) [ `'` ]
