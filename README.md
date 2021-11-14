@@ -36,23 +36,40 @@ simple and easy language used for input macros creation and payloads writing
 
 ```
 
-***
+---
 
 ### IDEA OF PROJECT
 Project is created for macro codes in standard office software, microcontroller-based project's payloads and standalone scripting. First idea was based on small and fast program for Seeeduino Xiao with microsd to sd card adapter directly attached to SPI pins. After proof-of-work construction and programming was finished successfully, many new ideas appears.
 
-***
+---
+
+### COMMANDS NAMESPACES
+- [__BASIC__](#basic-namespace) - _since v0.2_
+  - input, output, events, breakers and pauses
+- [__VARIABLES__](#variables-namespace) - _since v0.7_
+  - basic variable operations
+- [__LOGICS__](#logics-namespace) - _since v0.8_
+  - logic operations
+- [__PROCEDURES__](#procedures-namespace) - _since v0.9_
+  - procedures and conditional execution
+- [__MECHANICS__](#mechanics-namespace) - _since v0.4_
+  - enviroment behavior
+
+---
 
 ### BASIC ASSUMPTIONS OF LANGUAGE
 
 - every line contains one command with one argument.
+
 - commands are single ASCII characters in the range from 0x21 to 0x2F or from 0x3A to 0x40 or from 0x5B to 0x5F or from 0x7B to 0x7E, that starts line.
+
 - argument for every command starts after first char and ends before EOL.
+
 - additional character with code 0x23 is reserved for commentary.
 
-***
+---
 
-### COMMANDS LIST
+### ALL COMMANDS LIST
 - [commentary](./command-list/0x23.md) [ `#` ]
 ###### BASIC namespace
 - [print output](./command-list/0x3c.md) [ `<` ]
@@ -87,8 +104,20 @@ Project is created for macro codes in standard office software, microcontroller-
 - [setup enviroment and global switches](./command-list/0x22.md) [ `"` ]
 - [debug echo](./command-list/0x27.md) [ `'` ]
 
-***
+---
 
-### INTERPRETERS AND RELATED PROJECTS
+### INTERPRETERS
 
-- __HID-RAT-KEY__: badUSB HID keyboard interpreter with rattish scripting implementation (https://github.com/Sarverott/hid-rat-key)
+- __HID-RAT-KEY__: badUSB HID keyboard interpreter with Rattish Scripting implementation (https://github.com/Sarverott/hid-rat-key)
+
+---
+
+### PROJECTS
+
+- Rattish-Language (https://github.com/users/Sarverott/projects/4)
+
+---
+
+### LICENSE
+
+Published on terms of [MIT License](./LICENSE) by Sett Sarverott
