@@ -90,8 +90,8 @@ Project is created for macro codes in standard office software, microcontroller-
 - [set 1 to context variable if context variable is greater than variable, else 0](./command-list/0x5c.md) [ `\` ]
 - [set 1 to context variable if context variable is lesser than variable, else 0](./command-list/0x2f.md) [ `/` ]
 - [set 1 to context variable if context variable is equal to variable, else 0](./command-list/0x7c.md) [ `|` ]
-- [set 1 to context variable if context variable or variable is not 0, else 0](./command-list/0x3b.md) [ `;` ]
-- [set 1 to context variable if context variable and variable is not 0, else 0](./command-list/0x26.md) [ `&` ]
+- [set 1 to context variable if context variable is not 0 or variable is not 0, else 0](./command-list/0x3b.md) [ `;` ]
+- [set 1 to context variable if context variable is not 0 and variable is not 0, else 0](./command-list/0x26.md) [ `&` ]
 - [if context variable is 0 set 1, else 0](./command-list/0x7e.md) [ `~` ]
 ###### PROCEDURES namespace
 - [begin procedure declaration](./command-list/0x5b.md) [ `[` ]
