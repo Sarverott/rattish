@@ -65,27 +65,30 @@ Project is created for macro codes in standard office software, microcontroller-
 
 - argument for every command starts after first char and ends before EOL.
 
-- additional character with code 0x23 is reserved for commentary.
+- if line starts with other char, like for example space, letter or cipher it is commentary.
 
 ---
 
 ### ALL COMMANDS LIST
-- [commentary](./command-list/0x23.md) [ `#` ]
+
 ###### BASIC namespace
-- [print output](./command-list/0x3c.md) [ `<` ]
-- [read input](./command-list/0x3e.md) [ `>` ]
-- [wait time pause](./command-list/0x2e.md) [ `.` ]
+- [print static output / print output from variable](./command-list/0x3c.md) [ `<` ]
+- [read input to file / to variable](./command-list/0x3e.md) [ `>` ]
+- [wait time pause in miliseconds / seconds / minutes / hours](./command-list/0x2e.md) [ `"` ]
 - [press key(s)](./command-list/0x5f.md) [ `_` ]
 - [release key(s)](./command-list/0x5e.md) [ `^` ]
+
 ###### VARIABLES namespace
 - [point context on variable](./command-list/0x24.md) [ `$` ]
 - [set context variable](./command-list/0x3d.md) [ `=` ]
-- [add to context variable](./command-list/0x2b.md) [ `+` ]
-- [sub from context variable](./command-list/0x2d.md) [ `-` ]
-- [multiply context variable](./command-list/0x2a.md) [ `*` ]
-- [divide context variable](./command-list/0x3a.md) [ `:` ]
+- [add to context variable / string append](./command-list/0x2b.md) [ `+` ]
+- [sub from context variable / find and remove](./command-list/0x2d.md) [ `-` ]
+- [multiply context variable / get char at](./command-list/0x2a.md) [ `*` ]
+- [divide context variable / insert at](./command-list/0x3a.md) [ `:` ]
+- [modulo of context variable / string length](./command-list/0x40.md) [ `%` ]
 - [copy value from context variable to variable](./command-list/0x7d.md) [ `}` ]
 - [copy value from variable to context variable](./command-list/0x7b.md) [ `{` ]
+
 ###### LOGICS namespace
 - [set 1 to context variable if context variable is greater than variable, else 0](./command-list/0x5c.md) [ `\` ]
 - [set 1 to context variable if context variable is lesser than variable, else 0](./command-list/0x2f.md) [ `/` ]
@@ -93,28 +96,41 @@ Project is created for macro codes in standard office software, microcontroller-
 - [set 1 to context variable if context variable is not 0 or variable is not 0, else 0](./command-list/0x3b.md) [ `;` ]
 - [set 1 to context variable if context variable is not 0 and variable is not 0, else 0](./command-list/0x26.md) [ `&` ]
 - [if context variable is 0 set 1, else 0](./command-list/0x7e.md) [ `~` ]
+
 ###### PROCEDURES namespace
-- [begin procedure declaration](./command-list/0x5b.md) [ `[` ]
-- [end procedure declaration](./command-list/0x5d.md) [ `]` ]
-- [call procedure](./command-list/0x25.md) [ `%` ]
-- [begin condition block of code, based on if context variable is 1](./command-list/0x3f.md) [ `?` ]
-- [end conditional block](./command-list/0x21.md) [ `!` ]
-###### MECHANICS namespace
 - [import code from file](./command-list/0x40.md) [ `@` ]
-- [setup enviroment and global switches](./command-list/0x22.md) [ `"` ]
-- [debug echo](./command-list/0x27.md) [ `'` ]
+- [label for code jumping](./) [ `.` ]
+- [conditional jumper, based on if context variable is not 0 jump](./command-list/0x3f.md) [ `?` ]
+- [unconditional jumper, if label not exists stops current iteration](./command-list/0x21.md) [ `!` ]
+
+###### SYSTEM namespace
+- [setup enviroment and global switches / point-of-view changing](./command-list/0x23.md) [ `#` ]
+
+---
+#### commands unused in v1.0
+###### FREE namespace
+- [_in future plans as procedure declaration_]() [ `[` ]
+- [_in future plans as procedure declaration_]() [ `]` ]
+- [_for special personalization implementations_](./command-list/0x27.md) [ `'` ]
+- [_in future plans as data sets declaration_](./command-list/0x5b.md) [ `(` ]
+- [_in future plans as data sets declaration_](./command-list/0x5d.md) [ `)` ]
+- [_for special personalization implementations_](./command-list/0x27.md) [ `,` ]
 
 ---
 
 ### INTERPRETERS
 
 - __HID-RAT-KEY__: badUSB HID keyboard interpreter with Rattish Scripting implementation (https://github.com/Sarverott/hid-rat-key)
+- __RATATUILE__: multipurpose stand-alone engine for Windows and Linux (https://github.com/Sarverott/hid-rat-key)
+- __CYBERMOUSE__: JS online emulator (_early stage project_)
 
 ---
 
 ### PROJECTS
 
-- Rattish-Language (https://github.com/users/Sarverott/projects/4)
+- The Rattish Project (https://rattish.github.io/)
+- Tiny Furry On Bottom Of Sewer - Game for begginers to learn how to script in it (_early stage project_)
+
 
 ---
 
