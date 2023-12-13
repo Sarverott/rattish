@@ -1,0 +1,33 @@
+{
+  "textfield1":"simple and easy language used for input macros creation and payloads writing.",
+  "textfield2":"Project is created for macro codes in standard office software, microcontroller-based project's payloads and standalone scripting. First idea was based on small and fast program for Seeeduino Xiao with microsd to sd card adapter directly attached to SPI pins. After proof-of-work construction and programming was finished successfully, many new ideas appears.",
+  "langassumptions":[
+    "every line contains one command with one argument.",
+    "commands are single ASCII characters in the range from 0x21 to 0x2F or from 0x3A to 0x40 or from 0x5B to 0x5F or from 0x7B to 0x7E, that starts line.",
+    "argument for every command starts after first char and ends before EOL.",
+    "if line starts with other char, like for example space, letter or cipher it is commentary."
+  ],
+  "interpreterslist":{
+    "ratatuile-cpp":"",
+    "ratatuile-py":"",
+    "ratatuile-js":"",
+    "ratatuile-c":"",
+    "ratatuile-php":"",
+    "ratatuile-cs":"",
+    "ratatuile-j":""
+  },
+  "projects":{
+    "hid-rat-key":[
+      "badUSB HID keyboard interpreter with Rattish Scripting implementation",
+      "https://github.com/Sarverott/hid-rat-key"
+    ],
+    "cybermouse":[
+      "multipurpose stand-alone engine for Windows and Linux",
+      "https://github.com/Sarverott/hid-rat-key"
+    ],
+    "The Rattish Project":[
+      "https://rattish.github.io/"
+    ]
+  }
+
+}

@@ -1,0 +1,25 @@
+{
+  "name": "rattish",
+  "version": "1.0.0",
+  "description": "declaration of rattish language with neccesery tools",
+  "main": "README.md",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "ls -al"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarverott/rattish.git"
+  },
+  "keywords": [
+    "rattish"
+  ],
+  "author": "Sett Sarverott",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Sarverott/rattish/issues"
+  },
+  "homepage": "https://github.com/Sarverott/rattish#readme"
+}
