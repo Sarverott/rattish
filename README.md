@@ -37,7 +37,8 @@ simple and easy language used for input macros creation and payloads writing.
 
 ---
 
-### IDEA OF PROJECT
+### IDEA OF PROJECT, MAIN TARGET AND POSSIBILITIES
+
 Project is created for macro codes in standard office software, microcontroller-based project's payloads and standalone scripting. First idea was based on small and fast program for Seeeduino Xiao with microsd to sd card adapter directly attached to SPI pins. After proof-of-work construction and programming was finished successfully, many new ideas appears.
 
 ---
@@ -45,16 +46,16 @@ Project is created for macro codes in standard office software, microcontroller-
 ### BASIC ASSUMPTIONS
 
 
-- every line contains one command with one argument.
-- commands are single ASCII characters in the range from 0x21 to 0x2F or from 0x3A to 0x40 or from 0x5B to 0x5F or from 0x7B to 0x7E, that starts line.
-- argument for every command starts after first char and ends before EOL.
-- if line starts with other char, like for example space, letter or cipher it is commentary.
+ - every line contains one command with one argument.
+ - commands are single ASCII characters in the range from 0x21 to 0x2F or from 0x3A to 0x40 or from 0x5B to 0x5F or from 0x7B to 0x7E, that starts line.
+ - argument for every command starts after first char and ends before EOL.
+ - if line starts with other char, like for example space, letter or cipher it is commentary.
 
 ---
 
 ### COMMANDS
 
-###### BASIC namespace
+##### BASIC namespace
 > input, output, events, breakers and pauses
 
 - [wait time pause in miliseconds / seconds / minutes / hours](./command-list/0x22.md) [` " `]
@@ -63,7 +64,7 @@ Project is created for macro codes in standard office software, microcontroller-
 - [release key(s)](./command-list/0x5e.md) [` ^ `]
 - [press key(s)](./command-list/0x5f.md) [` _ `]
 
-###### VARIABLES namespace
+##### VARIABLES namespace
 > basic variable operations
 
 - [point context on variable](./command-list/0x24.md) [` $ `]
@@ -73,12 +74,12 @@ Project is created for macro codes in standard office software, microcontroller-
 - [sub from context variable / find and remove](./command-list/0x2d.md) [` - `]
 - [divide context variable / insert at](./command-list/0x3a.md) [` : `]
 - [set context variable](./command-list/0x3d.md) [` = `]
-- [move variable context to left](./command-list/0x5b.md) [` [ `]
-- [move variable context to right](./command-list/0x5d.md) [` ] `]
+- [move variable context pointer to left](./command-list/0x5b.md) [` [ `]
+- [move variable context pointer to right](./command-list/0x5d.md) [` ] `]
 - [copy value from variable to context variable](./command-list/0x7b.md) [` { `]
 - [copy value from context variable to variable](./command-list/0x7d.md) [` } `]
 
-###### LOGICS namespace
+##### LOGICS namespace
 > logic operations
 
 - [set 1 to context variable if context variable is not 0 and variable is not 0, else 0](./command-list/0x26.md) [` & `]
@@ -88,18 +89,52 @@ Project is created for macro codes in standard office software, microcontroller-
 - [set 1 to context variable if context variable is equal to variable, else 0](./command-list/0x7c.md) [` | `]
 - [if context variable is 0 set 1, else 0](./command-list/0x7e.md) [` ~ `]
 
-###### PROCEDURES namespace
+##### PROCEDURES namespace
 > procedures and conditional execution
 
 - [unconditional jumper, if label not exists stops current iteration](./command-list/0x21.md) [` ! `]
 - [label for code jumping](./command-list/0x2e.md) [` . `]
 - [conditional jumper, based on if context variable is not 0 jump](./command-list/0x3f.md) [` ? `]
 
-###### MECHANICS namespace
+##### MECHANICS namespace
 > enviroment behavior and system operators
 
 - [setup enviroment and global switches / point-of-view changing](./command-list/0x23.md) [` # `]
 - [import code from file](./command-list/0x40.md) [` @ `]
+
+
+###### *still undefined commands* 
+- [undefined function for that moment](./command-list/0x27.md) [` ' `]
+- [undefined function for that moment](./command-list/0x28.md) [` ( `]
+- [undefined function for that moment](./command-list/0x29.md) [` ) `]
+- [undefined function for that moment](./command-list/0x2c.md) [` , `]
+- [undefined function for that moment](./command-list/0x60.md) [` `` `]
+
+
+
+---
+
+### RATTISH EXAMPLES
+
+ - [write grub init script](./examples/write-grub-init-script/README.md) : 
+ - - payload.rat 
+ - - README.md 
+
+ - [set promo ads and links](./examples/set-promo-ads-and-links/README.md) : 
+ - - payload.rat 
+ - - README.md 
+
+ - [set random changing desktop](./examples/set-random-changing-desktop/README.md) : 
+ - - payload.rat 
+ - - README.md 
+
+ - [install software linux](./examples/install-software-linux/README.md) : 
+ - - payload.rat 
+ - - README.md 
+
+ - [download files](./examples/download-files/README.md) : 
+ - - payload.rat 
+ - - README.md 
 
 
 
@@ -107,16 +142,29 @@ Project is created for macro codes in standard office software, microcontroller-
 
 ### INTERPRETERS
 
-<<<INTERPRETERSLIST>>>
+ - __ratatuile-cpp__ :  
+ - __ratatuile-py__ :  
+ - __ratatuile-js__ :  
+ - __ratatuile-c__ :  
+ - __ratatuile-php__ :  
+ - __ratatuile-cs__ :  
+ - __ratatuile-j__ :  
+
 
 ---
 
 ### PROJECTS
 
-<<<PROJECTSCONNECTED>>>
+ - [__hid-rat-key__](https://github.com/Sarverott/hid-rat-key) - badUSB HID keyboard interpreter with Rattish Scripting implementation
+ - [__cybermouse__](https://github.com/Sarverott/hid-rat-key) - multipurpose stand-alone engine for Windows and Linux
+ - [__The Rattish Project__](https://rattish.github.io/)
+
 
 ---
 
 ### LICENSE
 
 Published on terms of [GPL-3.0](./LICENSE) by Sett Sarverott
+
+---
+***PROJECT RATTISH `@` 2023***
