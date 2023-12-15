@@ -9,7 +9,8 @@
   "scripts": {
     "test": "python3 build/print-info.py",
     "build": "python3 build/recreate-docs.py",
-    "pull": "git pull"
+    "pull": "git pull",
+    "regenerate": "sh ./build/git-update-after-regenerate.sh"
   },
   "repository": {
     "type": "git",
