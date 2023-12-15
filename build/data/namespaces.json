@@ -1,27 +1,22 @@
 {
     "basic": {
         "description": "input, output, events, breakers and pauses",
-        "details": "",
-        "commands": null
+        "details": ""
     },
     "variables": {
         "description": "basic variable operations",
-        "details": "",
-        "commands": null
+        "details": ""
     },
     "logics": {
         "description": "logic operations",
-        "details": "",
-        "commands": null
+        "details": ""
     },
     "procedures": {
         "description": "procedures and conditional execution",
-        "details": "",
-        "commands": null
+        "details": ""
     },
     "mechanics": {
         "description": "enviroment behavior and system operators",
-        "details": "",
-        "commands": null
+        "details": ""
     }
 }

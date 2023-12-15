@@ -7,7 +7,9 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "ls -al"
+    "test": "python3 build/print-info.py",
+    "build": "python3 build/recreate-docs.py",
+    "pull": "git pull"
   },
   "repository": {
     "type": "git",

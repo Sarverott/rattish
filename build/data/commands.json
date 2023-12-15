@@ -112,7 +112,7 @@
     "0x5b": {
         "namespace": "variables",
         "char": "[",
-        "description": "move variable context to left"
+        "description": "move variable context pointer to left"
     },
     "0x5c": {
         "namespace": "logics",
@@ -122,7 +122,7 @@
     "0x5d": {
         "namespace": "variables",
         "char": "]",
-        "description": "move variable context to right"
+        "description": "move variable context pointer to right"
     },
     "0x5e": {
         "namespace": "basic",

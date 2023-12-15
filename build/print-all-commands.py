@@ -25,6 +25,29 @@ commandsDict = {}
 namespaces = []
 namespacesDict={}
 
+def loadTxt(file):
+    out=""
+    with open(f'data/{file}.txt',"r") as filehook:
+        out=parseRaw(filehook.read())
+    return out
+
+def saveTxt(file, contentlist):
+    with open(f'data/{file}.txt',"w") as filehook:
+        filehook.write("\n".join(contentlist))
+        filehook.write("\n")
+
+def loadJson(file):
+    out=None
+    with open(f'data/{file}.json',"r") as filehook:
+        out=json.loads(filehook.read())
+    return out
+
+def saveJson(file, content):
+    with open(f'data/{file}.json',"w") as filehook:
+        filehook.write(json.dumps(content, indent=4))
+
+
+
 def loadNamespacesTxt(nmspFile="namespaces.txt"):
     global namespaces
     with open(nmspFile,"r") as namespacesTxt:
@@ -95,10 +118,22 @@ def mapCommands(loadSource=None):
 
 #mapCommands("old-readme")
 
-def writeCommandFromTemplate(hexKey, contentFill):
+def createMdUsingTemplate(templateFile, fillingDictionary, outputFile):
     templateText=""
-    with open("command-details-template.md","r") as template:
+    with open(f'templates/{templateFile}.md',"r") as template:
         templateText=template.read()
+
+    for fillGap in fillingDictionary:
+        templateText=templateText.replace(
+            f'<<<{fillGap.upper()}>>>',
+            fillingDictionary[fillGap]
+        )
+    with open(f'../{outputFile}',"w") as outHook:
+        outHook.write(templateText)
+
+
+def writeCommandFromTemplate(hexKey, contentFill):
+
     templateText=templateText.replace("<<<YEAR>>>", str(datetime.datetime.now().year))
     templateText=templateText.replace("<<<ASCIIHEX>>>", hexKey)
     templateText=templateText.replace("<<<ASCIIDEC>>>", str(ord(contentFill["char"])))

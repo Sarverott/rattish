@@ -6,15 +6,15 @@
 ##### <<<NAMESPACE>>> namespace
 - ASCII hex: __<<<ASCIIHEX>>>__
 - ASCII dec: __<<<ASCIIDEC>>>__
-- ASCII character: `<<<ASCIICHAR>>>`
+- ASCII char: `<<<ASCIICHAR>>>`
 
-> <<<DETAILS>>>
+<<<DETAILS>>>
 
 ---
 
-  ```
-  <<<CODESAMPLE>>>
-  ```
+<<<USAGE>>>
+
+---
 
 <<<EXAMPLELINKSECTION>>>
 

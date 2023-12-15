@@ -1,2 +1,2 @@
 
-ls ../command-list/ -1 |wc -l
+ls ../command-list/ -1 | wc -l

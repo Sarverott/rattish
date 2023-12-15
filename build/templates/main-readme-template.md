@@ -1,5 +1,5 @@
 # Rattish language manuals
-<<<TEXTFIELD1>>>
+<<<INTRO>>>
 
 ```                                                                               
 
@@ -37,8 +37,9 @@
 
 ---
 
-### IDEA OF PROJECT
-<<<TEXTFIELD2>>>
+### IDEA OF PROJECT, MAIN TARGET AND POSSIBILITIES
+
+<<<DETAILS>>>
 
 ---
 
@@ -51,6 +52,12 @@
 ### COMMANDS
 
 <<<COMMANDSLISTWITHNAMESPACES>>>
+
+---
+
+### RATTISH EXAMPLES
+
+<<<EXAMPLESOFRATTISH>>>
 
 ---
 
@@ -69,3 +76,6 @@
 ### LICENSE
 
 Published on terms of [GPL-3.0](./LICENSE) by Sett Sarverott
+
+---
+***PROJECT RATTISH `@` <<<YEAR>>>***
