@@ -46,7 +46,7 @@ Project is created for macro codes in standard office software, microcontroller-
 ### BASIC ASSUMPTIONS
 
 
- - every line contains one command with one argument.
+ - every line contains one command char with one string argument. for example in `<input` that `<` is command and `input` is argument of this command
  - commands are single ASCII characters in the range from 0x21 to 0x2F or from 0x3A to 0x40 or from 0x5B to 0x5F or from 0x7B to 0x7E, that starts line.
  - argument for every command starts after first char and ends before EOL.
  - if line starts with other char, like for example space, letter or cipher it is commentary.
@@ -142,13 +142,13 @@ Project is created for macro codes in standard office software, microcontroller-
 
 ### INTERPRETERS
 
- - __ratatuile-cpp__ :  
- - __ratatuile-py__ :  
- - __ratatuile-js__ :  
- - __ratatuile-c__ :  
- - __ratatuile-php__ :  
- - __ratatuile-cs__ :  
- - __ratatuile-j__ :  
+ - __cybermouse__ : interpreter in javascript, for education 
+ - __rat-la-snake__ : interpreter in python, mainly to interact with ADB and VirtualBox 
+ - __ratatuille__ : interpreter in c++, minimal shell use for linux and windows 
+ - __ratatu__ : interpreter in c, for arduino 
+ - __danger-squirel__ : interpreter in php, redirects using macros 
+ - __otter-j__ : interpreter in java 
+ - __sharp-capibarra__ : interpreter in c# 
 
 
 ---
@@ -156,7 +156,9 @@ Project is created for macro codes in standard office software, microcontroller-
 ### PROJECTS
 
  - [__hid-rat-key__](https://github.com/Sarverott/hid-rat-key) - badUSB HID keyboard interpreter with Rattish Scripting implementation
- - [__cybermouse__](https://github.com/Sarverott/hid-rat-key) - multipurpose stand-alone engine for Windows and Linux
+ - [__hamster-prompt__](./) - terminal helper with rattish macros handling
+ - [__morbid-mole__](./) - small version of rodent agent with stelth mode
+ - [__rodent-crypt__](./) - encryptor, based on rattish language
  - [__The Rattish Project__](https://rattish.github.io/)
 
 
