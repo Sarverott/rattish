@@ -2,7 +2,8 @@
 
 echo "start menu"
 echo "tools list"
-echo "develope stuff"
+#echo "develope stuff"
+sh ./.devtools/.tty-story/devtools-submodules.sh
 echo "manuals reader"
 echo "testing"
 echo "references"
