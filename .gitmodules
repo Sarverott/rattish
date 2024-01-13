@@ -1,0 +1,9 @@
+[submodule ".devtools/doc-build"]
+	path = .devtools/doc-build
+	url = https://github.com/rattish/documentation-builder.git
+[submodule ".devtools/repochainer"]
+	path = .devtools/repochainer
+	url = https://github.com/rattish/branching-chainer.git
+[submodule ".devtools/data-edit"]
+	path = .devtools/data-edit
+	url = https://github.com/rattish/ratman-dataedit.git
