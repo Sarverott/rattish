@@ -11,8 +11,8 @@ $PROC_PATH/submodule-reload.sh https://github.com/rattish/ratman-dataedit.git ./
 $PROC_PATH/submodule-reload.sh https://github.com/rattish/documentation-builder.git ./.doc-build/data-edit
 $PROC_PATH/submodule-reload.sh https://github.com/rattish/branching-chainer.git ./.devtools/repochainer
 
-git submodule foreach --recursive git checkout master
-git submodule foreach --recursive git pull
+git submodule foreach --recursive git checkout main
+git submodule foreach --recursive git pull main
 
 
 $PROC_PATH/inspect.sh documentation-builder upload
