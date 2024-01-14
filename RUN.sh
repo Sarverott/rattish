@@ -1,8 +1,15 @@
 #!/bin/sh
 
-echo "start menu"
-echo "tools list"
+
+ra ratman-dataedit documentation-builder branching-chainer
+
+
+
+#echo "start menu"
+#echo "tools list"
 #echo "develope stuff"
+
+
 sh ./.devtools/.tty-story/devtools-submodules.sh
 echo "manuals reader"
 echo "testing"
