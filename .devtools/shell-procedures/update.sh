@@ -13,9 +13,9 @@ $PROC_PATH/inspect.sh ratman-dataedit
 $PROC_PATH/inspect.sh branching-chainer
 $PROC_PATH/inspect.sh rattish
 
-$PROC_PATH/upload.sh documentation-builder
-$PROC_PATH/upload.sh ratman-dataedit
-$PROC_PATH/upload.sh branching-chainer
-$PROC_PATH/upload.sh rattish
+$PROC_PATH/publish.sh documentation-builder
+$PROC_PATH/publish.sh ratman-dataedit
+$PROC_PATH/publish.sh branching-chainer
+$PROC_PATH/publish.sh rattish
 
 echo "### REPO_MANAGEMENT :: update :: ends ###"
