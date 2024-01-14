@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-ra ratman-dataedit documentation-builder branching-chainer
+
 
 
 
@@ -9,8 +9,9 @@ ra ratman-dataedit documentation-builder branching-chainer
 #echo "tools list"
 #echo "develope stuff"
 
+./.devtools/shell-procedures/open-project.sh
 
-sh ./.devtools/.tty-story/devtools-submodules.sh
+#sh ./.devtools/.tty-story/devtools-submodules.sh
 echo "manuals reader"
 echo "testing"
 echo "references"
