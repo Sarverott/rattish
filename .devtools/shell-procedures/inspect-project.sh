@@ -2,7 +2,7 @@
 
 PROC_PATH=$(dirname "$0")
 source $PROC_PATH/functions.sh
-
+source $PROC_PATH/printer_commit.sh
 
 
 repo_check() {
@@ -10,9 +10,6 @@ repo_check() {
   git fetch --all
   git submodule sync
   git submodule update
-}
-update_title() {
-  echo "$GIT_CURRENT_USER@$1::CommitUpdate[ No. $(version_local) ]"
 }
 inspect_repo(){
   repo_check $1
@@ -27,7 +24,7 @@ inspect_repo(){
   if [ $(git status -s | wc -l) -ne 0 ] ; then  ## unstaged need to be done
     git add *
     git add .devtools/*
-    git commit -m "$(update_title $1)"
+    git commit -m "$(_PRINT_COMMIT_MESSAGE $1)"
   fi
 }
 
