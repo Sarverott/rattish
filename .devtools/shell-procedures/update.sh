@@ -5,8 +5,11 @@ echo "### REPO_MANAGEMENT :: update :: begins ###"
 PROC_PATH=$(dirname "$0")
 source $PROC_PATH/helper.sh
 
-
 $PROC_PATH/init.sh documentation-builder ratman-dataedit branching-chainer
+
+$PROC_PATH/submodule-reload.sh https://github.com/rattish/ratman-dataedit.git ./.devtools/data-edit
+$PROC_PATH/submodule-reload.sh https://github.com/rattish/documentation-builder.git ./.doc-build/data-edit
+$PROC_PATH/submodule-reload.sh https://github.com/rattish/branching-chainer.git ./.devtools/repochainer
 
 $PROC_PATH/inspect.sh documentation-builder upload
 $PROC_PATH/inspect.sh ratman-dataedit upload

@@ -5,8 +5,12 @@
 [submodule ".devtools/repochainer"]
 	path = .devtools/repochainer
 	url = https://github.com/rattish/branching-chainer.git
-	branch = master
+	branch = main
 [submodule ".devtools/data-edit"]
 	path = .devtools/data-edit
 	url = https://github.com/rattish/ratman-dataedit.git
-	branch = master
+	branch = main
+[submodule ".doc-build/data-edit"]
+	path = .doc-build/data-edit
+	url = https://github.com/rattish/documentation-builder.git
+	branch = main
