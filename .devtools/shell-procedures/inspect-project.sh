@@ -26,6 +26,7 @@ inspect_repo(){
   #
   if [ $(git status -s | wc -l) -ne 0 ] ; then  ## unstaged need to be done
     git add *
+    git add .devtools/*
     git commit -m "$(update_title $1)"
   fi
 }
