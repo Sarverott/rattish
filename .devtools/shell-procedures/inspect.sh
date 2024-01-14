@@ -12,7 +12,7 @@ synchronize_it() {
   git pull
 }
 publish_it() {
-  $PROC_PATH/publish.sh $1
+  $PROC_PATH/publish.sh $1 $2
 }
 repo_check() {
   cd "../$1"
@@ -32,7 +32,7 @@ inspect_repo(){
 
   elif [ $V_DIIFFRENCE -gt $(($RANDOM%10+10)) ]; then  ## need to be updated
 
-    publis_ith $1
+    publish_it $1 $2
 
   fi
   #
@@ -43,7 +43,7 @@ inspect_repo(){
   fi
 }
 
-inspect_repo $1
+inspect_repo $1 $2
 
 
 #for (( i=0; i<=$#; i++ )); do

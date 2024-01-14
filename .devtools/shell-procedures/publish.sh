@@ -11,17 +11,22 @@ upload() {
   cd ../$1
   if [ $(version_local) -ge $(version_remote) ] ; then
     if [ $2 == "upload" ] ; then
+      gh repo sync rattish/$1 -b origin/main
+      git pull
       git push
       gh pr create --title "$(_PRINT_TITLE $1)" --body "$(_PRINT_BODY $1)"
-    else
-      echo "unknown command"
+    elif [ $2 == "release" ] ; then
+      gh repo sync rattish/$1 -b origin/main
+      git pull
+      git push
+      gh release create v1.2.3 --generate-notes
     fi
   fi
 }
 
 #update_and_upload_repo rattiish
 
-upload $1 "upload"
+upload $1 $2
 
 #git diff main origin/main --numstat
 
