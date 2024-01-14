@@ -14,7 +14,7 @@ upload() {
       git push
       gh pr create --title "$(_PRINT_TITLE $1)" --body "$(_PRINT_BODY $1)"
     else
-
+      echo "unknown command"
     fi
   fi
 }
