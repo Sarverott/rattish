@@ -24,6 +24,8 @@ fork_if_not_exist() {
   fi
 }
 
+echo "### REPO_MANAGEMENT :: init :: begins ###"
+
 cd ..
 
 for (( i=0; i<=$#; i++ )); do
@@ -37,3 +39,5 @@ done
 #devtool_fork_and_clone ratman-dataedit
 
 cd rattish
+
+echo "### REPO_MANAGEMENT :: init :: ends ###"

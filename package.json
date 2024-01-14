@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "./RUN.sh"
+    "start": "./RUN.sh",
+    "test": "./.devtools/shell-procedures/update.sh",
+    "edit": "./.devtools/shell-procedures/open.sh atom"
   },
   "repository": {
     "type": "git",

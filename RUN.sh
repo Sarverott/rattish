@@ -9,7 +9,7 @@
 #echo "tools list"
 #echo "develope stuff"
 
-./.devtools/shell-procedures/open-project.sh atom
+
 
 #sh ./.devtools/.tty-story/devtools-submodules.sh
 echo "manuals reader"

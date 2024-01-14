@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+echo "### REPO_MANAGEMENT :: inspect :: begins ###"
 
 PROC_PATH=$(dirname "$0")
 source $PROC_PATH/helper.sh
@@ -58,3 +58,5 @@ inspect_repo $1
 #sync_repo documentation-builder
 #sync_repo branching-chainer
 #sync_repo rattish
+
+echo "### REPO_MANAGEMENT :: inspect :: ends ###"

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "### REPO_MANAGEMENT :: publish :: begins ###"
+
 PROC_PATH=$(dirname "$0")
 source $PROC_PATH/helper.sh
 source $PROC_PATH/printer_pullrequest.sh
@@ -22,3 +24,5 @@ upload() {
 upload $1 "upload"
 
 #git diff main origin/main --numstat
+
+echo "### REPO_MANAGEMENT :: publish :: ends ###"
