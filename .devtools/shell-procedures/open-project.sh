@@ -7,7 +7,7 @@ shift 1
 
 $PROC_PATH/init-dev.sh $@
 
-$PROC_PATH/sync-devtools.sh $@ rattish
+#$PROC_PATH/sync-devtools.sh $@ rattish
 
 $EDITOR --foreground --no-sandbox . $@
 

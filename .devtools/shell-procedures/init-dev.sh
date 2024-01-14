@@ -3,11 +3,11 @@
 source $(dirname "$0")/functions.sh
 
 submods_fork_and_clone() {
-  gh repo fork "rattish/$1" --clone=true --remote-name "rattish-devtools-$1"
+  gh repo fork "rattish/$1" --clone=true --remote-name "$(forkname $1)"
   #git clone "https://github.com/$GIT_CURRENT_USER/rattish-devtools-$1.git"
 }
 api_call_for_status(){
-  curl "https://api.github.com/repos/$GIT_CURRENT_USER/rattish-devtools-$1" -I | grep "^HTTP\/"
+  curl "https://api.github.com/repos/$GIT_CURRENT_USER/$(forkname $1)" -I | grep "^HTTP\/"
 }
 fork_if_not_exist() {
   IFS=' '
@@ -15,8 +15,8 @@ fork_if_not_exist() {
   read -a RESULT_HTTP_CODE <<< "$API_CALL_STATUS"
   if [ "${RESULT_HTTP_CODE[1]}" == "404" ] ; then
     devtool_fork_and_clone $1 $2
-  elif [ ( ! -e "../rattish-devtools-$1" ) -a ( "${RESULT_HTTP_CODE[1]}" == "200" ) ]; then
-    gh repo clone $GIT_CURRENT_USER/rattish-devtools-$1
+  elif [ ( ! -e "../$(forkname $1)" ) -a ( "${RESULT_HTTP_CODE[1]}" == "200" ) ]; then
+    gh repo clone $GIT_CURRENT_USER/$(forkname $1).git
   else
     echo "ERROR! exits on <fork_if_not_exist()> ..."
     exit 500
