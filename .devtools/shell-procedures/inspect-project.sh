@@ -14,37 +14,31 @@ repo_check() {
 update_title() {
   echo "$GIT_CURRENT_USER@$1::CommitUpdate[ No. $(version_local) ]"
 }
-commit_update() {
-  git add *
-  git commit -m "$(update_title $1)"
-}
-pull_update() {
-  gh repo sync rattish/$2 -b origin/main
-  git pull
-}
-inspect(){
+inspect_repo(){
   repo_check $1
   V_DIIFFRENCE=$(awk "BEGIN { local=$(version_local); remote=$(version_remote); print (local-remote) }")
-  if [ $V_DIIFFRENCE -ls 0 ]; then ## pull from remote
-
+  if [ $V_DIIFFRENCE -lt 0 ]; then ## pull from remote
+    gh repo sync rattish/$2 -b origin/main
+    git pull
   elif [ $V_DIIFFRENCE -gt $(($RANDOM%10+10)) ]; then  ## need to be updated
-
+    $PROC_PATH/upload-changes.sh $1
   fi
-
+  #
   if [ $(git status -s | wc -l) -ne 0 ] ; then  ## unstaged need to be done
-    #statements
-
+    git add *
+    git commit -m "$(update_title $1)"
   fi
 }
 
+inspect_repo $1 $2
 
 
-for (( i=0; i<=$#; i++ )); do
+#for (( i=0; i<=$#; i++ )); do
   #echo "$#" "$i" "${!i}"
-  devtools_check inspect "${!i}"
-  project_check inspect
+#  devtools_check inspect "${!i}"
+#  project_check inspect
 
-done
+#done
 
 
 #sync_repo ratman-dataedit

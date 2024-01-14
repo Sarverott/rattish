@@ -11,5 +11,6 @@ version_remote(){
   git rev-list --count origin/main
 }
 forkname() {
-  echo "rattish-devtools-$1"
+  #echo "rattish-devtools-$1"
+  echo "$1"
 }

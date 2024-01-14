@@ -15,7 +15,7 @@ fork_if_not_exist() {
   read -a RESULT_HTTP_CODE <<< "$API_CALL_STATUS"
   if [ "${RESULT_HTTP_CODE[1]}" == "404" ] ; then
     devtool_fork_and_clone $1 $2
-  elif [ ( ! -e "../$(forkname $1)" ) -a ( "${RESULT_HTTP_CODE[1]}" == "200" ) ]; then
+  elif [ ! -e "../$(forkname $1)" -a  "${RESULT_HTTP_CODE[1]}" == "200"  ]; then
     gh repo clone $GIT_CURRENT_USER/$(forkname $1).git
   else
     echo "ERROR! exits on <fork_if_not_exist()> ..."
