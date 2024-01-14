@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-source $(dirname "$0")/functions.sh
+PROC_PATH=$(dirname "$0")
+source $PROC_PATH/helper.sh
 
 submods_fork_and_clone() {
   gh repo fork "rattish/$1" --clone=true --remote-name "$(forkname $1)"

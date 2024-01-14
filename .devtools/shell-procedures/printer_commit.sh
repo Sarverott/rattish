@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PROC_PATH=$(dirname "$0")
-source $PROC_PATH/functions.sh
+source $PROC_PATH/helper.sh
 
 
 _PRINT_COMMIT_MESSAGE() {

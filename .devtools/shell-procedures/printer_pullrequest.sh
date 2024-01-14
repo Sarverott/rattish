@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 PROC_PATH=$(dirname "$0")
-source $PROC_PATH/functions.sh
-
+source $PROC_PATH/helper.sh
 
 _PRINT_TITLE() {
   echo "PullRequest[ rattish@REMOTE_$(version_remote) <<< $GIT_CURRENT_USER@LOCAL_$(version_local) ]"
