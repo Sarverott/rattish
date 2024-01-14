@@ -1,0 +1,28 @@
+{
+  "name": "rattish",
+  "version": "1.0.0",
+  "description": "basic package of npm for serve rattish declaration scope better coverage of quality",
+  "main": "./.devtools/_index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "./RUN.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rattish/rattish.git"
+  },
+  "keywords": [
+    "rattish",
+    "rat",
+    "language",
+    "simple"
+  ],
+  "author": "Sett Sarverott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rattish/rattish/issues"
+  },
+  "homepage": "https://github.com/rattish/rattish#readme"
+}

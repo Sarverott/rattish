@@ -17,4 +17,7 @@ $PROC_PATH/inspect-project.sh rattish
 
 $EDITOR --foreground --no-sandbox . ../documentation-builder ../ratman-dataedit ../branching-chainer
 
-$PROC_PATH/upload-changes.sh documentation-builder ratman-dataedit branching-chainer rattish
+$PROC_PATH/upload-changes.sh documentation-builder
+$PROC_PATH/upload-changes.sh ratman-dataedit
+$PROC_PATH/upload-changes.sh branching-chainer
+$PROC_PATH/upload-changes.sh rattish
