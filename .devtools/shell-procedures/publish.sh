@@ -6,6 +6,9 @@ PROC_PATH=$(dirname "$0")
 source $PROC_PATH/helper.sh
 source $PROC_PATH/printer_pullrequest.sh
 
+_PRINT_PACKAGE_JSON_VERSION() {
+  cut -b 3- <<< $(awk -F':|",' '{print $2}'  <<< $(grep -Po '"version":.*?[^\\]",' package.json))
+}
 
 upload() {
   cd ../$1
@@ -19,7 +22,7 @@ upload() {
       gh repo sync rattish/$1 -b origin/main
       git pull
       git push
-      gh release create v1.2.3 --generate-notes
+      gh release create "v$(_PRINT_PACKAGE_JSON_VERSION)" --generate-notes --latest --target master --title "RATTISH_releases_[#$(version_local)]"
     fi
   fi
 }
