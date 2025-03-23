@@ -1,7 +1,8 @@
 # Rattish language manuals
 simple and easy language used for input macros creation and payloads writing.
 
-```                                                                               
+```ascii-text-art 
+BEGIN ascii-text-art                                                                               
 
                                               %, .,,&       &#@
         █▀█ ▄▀█ ▀█▀ ▀█▀ █ █▀ █░█               %,,,,,*&   ((##/
@@ -32,7 +33,7 @@ simple and easy language used for input macros creation and payloads writing.
                          ,,,,,,,,,,,,,,,&%(**,,,#&&                  AT LEAST ONCE
                                             ,,&(,,,&,&,@
                                                  ,, ,
-
+END ascii-text-art 
 ```
 
 ---
