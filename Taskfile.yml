@@ -1,0 +1,19 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  BOS_tools: 
+    taskfile: https://raw.githubusercontent.com/Sarverott/blacksmith-organization-system/refs/heads/master/Taskfile.yml
+    flatten: true
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  #selective_ignorance:
+    #BOS_tools-> curl "https://gist.githubusercontent.com/Sarverott/a9933eea3dd0e4fc54e8ff275bd79dcf/raw/1480f29a978232284788a77162e08e73fb489fd6/selective_ignorance.sh" | bash -s git cmake,python,node
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
