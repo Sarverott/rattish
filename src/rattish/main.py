@@ -59,7 +59,7 @@ def init_meaningfile(meaningspace,  rattish_rootdir = os.path.dirname(__file__))
             manifest_file.write("\n\n")
             manifest_file.write(f"# RATTISH PROJECT - https://github.com/rattish/rattish/docs/commands/{command[1]}.md \n\n")
         
-        manifest_file.write(f"\ndef __init__(core):\n")
+        manifest_file.write(f"\ndef main(core):\n")
         for command in standard_space:
             manifest_file.write(f"\n\tcore[{json.dumps(command[0])}] = {meaningspace}___{command[4]}")
         
@@ -109,18 +109,18 @@ def init_meaningfile(meaningspace,  rattish_rootdir = os.path.dirname(__file__))
 #         )
 
 
-class RattishMeaning:
+# class RattishMeaning:
     
         
-    def __getitem__(self, key=None):
-        if key is None or key not in self.charmap:
-            raise KeyError(self, key)
-        return self.charmap[key]
+#     def __getitem__(self, key=None):
+#         if key is None or key not in self.charmap:
+#             raise KeyError(self, key)
+#         return self.charmap[key]
 
 
-class RattishMemory:
-    def __init__(self):
-        pass
+# class RattishMemory:
+#     def __init__(self):
+#         pass
 
 
 
@@ -179,45 +179,10 @@ class RattishProcessor:
             self.mode = "default"
             self.meaning_modes["default"] = default
 
-
-    def output_handler(self, string):
-        if string.strip():
-            print(string.strip())
-        else:
-            print(self.memory[self.context])
-
-    def input_handler(self, string):
-        
-        if string.strip():
-            self.memory[self.context] = input(string)
-        else:
-            #self.__class__()
-            self.memory[self.context] = input(self.memory[self.context])
-
-    def point_to_context(self, string):
-        if string.strip():
-            self.context=string.strip()
-        else:
-            self.memory["LAST_CONTEXT"] = self.context
-            self.context = "LAST_CONTEXT"
         #if not name is None:
             
         #return (self.context, name, self.context in self.memory)
-    def load_import(self, string):
-        to_be_imported = ""
-        if string.strip():
-            to_be_imported = string.strip()
-        else:
-            to_be_imported = self.memory[self.context]
-        if os.path.exists(to_be_imported):
-            with open(to_be_imported) as f:
-                self + f.read()
 
-    def assign_context_value(self, string):
-        if string.strip():
-            self.memory[self.context] = string
-        else:
-            del self.memory[self.context]
 
     def __getitem__(self, key=None):
         if key is None or key not in self.charmap:

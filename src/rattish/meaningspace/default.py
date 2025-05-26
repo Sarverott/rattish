@@ -1,5 +1,8 @@
 """Rattish initialized file ;; meaning_space=default """
 
+#import rattish.libs_resolve as LIBS
+import os
+
 # RATTISH PROJECT - https://github.com/rattish 
 
 def default___space(core, string):
@@ -65,9 +68,10 @@ def default___number_sign(core, string):
 def default___dollar_sign(core, string):
 	"""Rattish command ;; default , DOLLAR SIGN """
 	if string.strip():
-		pass #core.blank()
+		core.context = string.strip()
 	else:
-		pass #core.blank()
+		core.memory["LAST_CONTEXT"] = core.context
+		core.context = "LAST_CONTEXT"
 
 	#	CHAR=	$
 	#	DOCS=	0x24.md 
@@ -275,9 +279,9 @@ def default___semicolon(core, string):
 def default___lessthan_sign(core, string):
 	"""Rattish command ;; default , LESS-THAN SIGN """
 	if string.strip():
-		pass #core.blank()
+		core.memory[core.context] = input(string)
 	else:
-		pass #core.blank()
+		core.memory[core.context] = input(core.memory[core.context])
 
 	#	CHAR=	<
 	#	DOCS=	0x3c.md 
@@ -290,9 +294,9 @@ def default___lessthan_sign(core, string):
 def default___equals_sign(core, string):
 	"""Rattish command ;; default , EQUALS SIGN """
 	if string.strip():
-		pass #core.blank()
+		core.memory[core.context] = string
 	else:
-		pass #core.blank()
+		del core.memory[core.context]
 
 	#	CHAR=	=
 	#	DOCS=	0x3d.md 
@@ -303,11 +307,11 @@ def default___equals_sign(core, string):
 # RATTISH PROJECT - https://github.com/rattish/rattish/docs/commands/0x3d.md 
 
 def default___greaterthan_sign(core, string):
-	"""Rattish command ;; default , GREATER-THAN SIGN """
+	"""Rattish command ;; default , OUTPUT """
 	if string.strip():
-		pass #core.blank()
+		print(string.strip())
 	else:
-		pass #core.blank()
+		print(core.memory[core.context])
 
 	#	CHAR=	>
 	#	DOCS=	0x3e.md 
@@ -334,10 +338,14 @@ def default___question_mark(core, string):
 
 def default___commercial_at(core, string):
 	"""Rattish command ;; default , COMMERCIAL AT """
+	to_be_imported = ""
 	if string.strip():
-		pass #core.blank()
+		to_be_imported = string.strip()
 	else:
-		pass #core.blank()
+		to_be_imported = core.memory[core.context]
+	if os.path.exists(to_be_imported):
+		with open(to_be_imported) as f:
+			core + f.read()
 
 	#	CHAR=	@
 	#	DOCS=	0x40.md 
@@ -498,7 +506,7 @@ def default___tilde(core, string):
 # RATTISH PROJECT - https://github.com/rattish/rattish/docs/commands/0x7e.md 
 
 
-def __init__(core):
+def main(core):
 
 	core[" "] = default___space
 	core["!"] = default___exclamation_mark
