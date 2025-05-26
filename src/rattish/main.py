@@ -113,7 +113,16 @@ class RattishProcessor:
 
     #def __truediv__(self, meaningspace):
     #    pass
-        
+    
+    def memsafe_acc(self):
+        self.standart_checkup()
+        if "ACC" not in self.memory:
+            self.memory["ACC"] = 0
+
+    def memsafe_context(self):
+        self.standart_checkup()
+        if self.context not in self.memory:
+            self.memory[self.context] = 0
             
     def __init__(self, shared_inherits=None):
         # if shared_inherits is not None:

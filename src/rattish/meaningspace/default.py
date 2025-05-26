@@ -1,24 +1,15 @@
 """Rattish initialized file ;; meaning_space=default """
 
-#import rattish.libs_resolve as LIBS
+# import rattish.libs_resolve as LIBS
 import os
+import time
 
 # RATTISH PROJECT - https://github.com/rattish 
 
+
 def default___space(core, string):
-	"""Rattish command ;; default , SPACE """
-	if string.strip():
-		pass #core.blank()
-	else:
-		pass #core.blank()
-
-	#	CHAR=	 
-	#	DOCS=	0x20.md 
-	#	ASCII=	32
-	#	NAME=	SPACE
-	#	FUNCTION=	default___space
-
-# RATTISH PROJECT - https://github.com/rattish/rattish/docs/commands/0x20.md 
+	"""VOID"""
+	pass
 
 def default___exclamation_mark(core, string):
 	"""Rattish command ;; default , EXCLAMATION MARK """
@@ -38,9 +29,9 @@ def default___exclamation_mark(core, string):
 def default___quotation_mark(core, string):
 	"""Rattish command ;; default , QUOTATION MARK """
 	if string.strip():
-		pass #core.blank()
+		time.sleep(int(string)/1000)
 	else:
-		pass #core.blank()
+		time.sleep(1)
 
 	#	CHAR=	"
 	#	DOCS=	0x22.md 
@@ -67,11 +58,12 @@ def default___number_sign(core, string):
 
 def default___dollar_sign(core, string):
 	"""Rattish command ;; default , DOLLAR SIGN """
+	core.memsafe_context()
 	if string.strip():
 		core.context = string.strip()
 	else:
-		core.memory["LAST_CONTEXT"] = core.context
-		core.context = "LAST_CONTEXT"
+		core.memory["ACC"] = core.context
+		core.context = "ACC"
 
 	#	CHAR=	$
 	#	DOCS=	0x24.md 
@@ -83,10 +75,11 @@ def default___dollar_sign(core, string):
 
 def default___percent_sign(core, string):
 	"""Rattish command ;; default , PERCENT SIGN """
+	core.memsafe_context()
 	if string.strip():
-		pass #core.blank()
+		core.memory["ACC"]=int(core.memory[core.context])%int(string.strip())
 	else:
-		pass #core.blank()
+		core.memory["ACC"]=len(core.memory[core.context])
 
 	#	CHAR=	%
 	#	DOCS=	0x25.md 
@@ -98,11 +91,20 @@ def default___percent_sign(core, string):
 
 def default___ampersand(core, string):
 	"""Rattish command ;; default , AMPERSAND """
+	core.memsafe_context()
 	if string.strip():
-		pass #core.blank()
+		if not string.strip() in core.memory:
+			core.memory[string.strip()] = 0
+		if core.memory[string.strip()] and core.memory[core.context]:
+			core.memory["ACC"] = 1
+		else:
+			core.memory["ACC"] = 0
 	else:
-		pass #core.blank()
-
+		core.memsafe_acc()
+		if core.memory["ACC"] and core.memory[core.context]:
+			core.memory["ACC"] = 1
+		else:
+			core.memory["ACC"] = 0
 	#	CHAR=	&
 	#	DOCS=	0x26.md 
 	#	ASCII=	38
@@ -113,10 +115,11 @@ def default___ampersand(core, string):
 
 def default___apostrophe(core, string):
 	"""Rattish command ;; default , APOSTROPHE """
-	if string.strip():
-		pass #core.blank()
+	if string:
+		#core.squeek_talk(string)
+		pass
 	else:
-		pass #core.blank()
+		pass
 
 	#	CHAR=	'
 	#	DOCS=	0x27.md 
@@ -158,10 +161,12 @@ def default___right_parenthesis(core, string):
 
 def default___asterisk(core, string):
 	"""Rattish command ;; default , ASTERISK """
+	core.memsafe_context()
 	if string.strip():
-		pass #core.blank()
+		core.memory[core.context]=core.memory[core.context][int(string.strip())]
 	else:
-		pass #core.blank()
+		core.memsafe_acc()
+		core.memory[core.context]=core.memory[core.context][int(core.memory["ACC"])]
 
 	#	CHAR=	*
 	#	DOCS=	0x2a.md 
@@ -173,10 +178,13 @@ def default___asterisk(core, string):
 
 def default___plus_sign(core, string):
 	"""Rattish command ;; default , PLUS SIGN """
+	core.memsafe_context()
 	if string.strip():
-		pass #core.blank()
+		core.memory[core.context]+=string.strip()
+		#pass #core.blank()
 	else:
-		pass #core.blank()
+		core.memsafe_acc()
+		core.memory[core.context]+=core.memory["ACC"]
 
 	#	CHAR=	+
 	#	DOCS=	0x2b.md 
@@ -263,10 +271,20 @@ def default___colon(core, string):
 
 def default___semicolon(core, string):
 	"""Rattish command ;; default , SEMICOLON """
+	core.memsafe_context()
 	if string.strip():
-		pass #core.blank()
+		if not string.strip() in core.memory:
+			core.memory[string.strip()] = 0
+		if core.memory[string.strip()] or core.memory[core.context]:
+			core.memory["ACC"] = 1
+		else:
+			core.memory["ACC"] = 0
 	else:
-		pass #core.blank()
+		core.memsafe_acc()
+		if core.memory["ACC"] or core.memory[core.context]:
+			core.memory["ACC"] = 1
+		else:
+			core.memory["ACC"] = 0
 
 	#	CHAR=	;
 	#	DOCS=	0x3b.md 
@@ -281,6 +299,7 @@ def default___lessthan_sign(core, string):
 	if string.strip():
 		core.memory[core.context] = input(string)
 	else:
+		core.memsafe_context()
 		core.memory[core.context] = input(core.memory[core.context])
 
 	#	CHAR=	<
@@ -296,7 +315,9 @@ def default___equals_sign(core, string):
 	if string.strip():
 		core.memory[core.context] = string
 	else:
-		del core.memory[core.context]
+		core.memsafe_acc()
+		core.memory[core.context] = core.memory["ACC"]
+		#del core.memory[core.context]
 
 	#	CHAR=	=
 	#	DOCS=	0x3d.md 
@@ -311,6 +332,7 @@ def default___greaterthan_sign(core, string):
 	if string.strip():
 		print(string.strip())
 	else:
+		core.memsafe_context()
 		print(core.memory[core.context])
 
 	#	CHAR=	>
