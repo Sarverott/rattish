@@ -1,0 +1,1 @@
+# interpreter wykonawczy bazy systemu komputacji

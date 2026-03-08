@@ -1,0 +1,1 @@
+# zestaw przeznaczony do uniwersalnego definiowania

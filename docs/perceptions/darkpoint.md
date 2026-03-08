@@ -1,0 +1,1 @@
+# ciągi skojażeniowe pamięci znaczeniowej

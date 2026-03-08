@@ -1,0 +1,1 @@
+# forma zapisowa imperatywu działania prawnych zestawów dokumentów

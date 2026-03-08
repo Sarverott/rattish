@@ -1,0 +1,1 @@
+# procedury makro do skryptów automatyzacji symulowania urządzeń HID

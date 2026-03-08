@@ -1,0 +1,1 @@
+# proste operowanie ciągami znaków tekstowych

@@ -1,0 +1,1 @@
+# protokolarna forma operowania na sieciowej obsłudze komunikacji

@@ -9,7 +9,8 @@
   "scripts": {
     "start": "./RUN.sh",
     "test": "./.devtools/shell-procedures/update.sh",
-    "edit": "./.devtools/shell-procedures/open.sh atom"
+    "edit": "./.devtools/shell-procedures/open.sh atom",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/rattish/rattish/issues"
   },
-  "homepage": "https://github.com/rattish/rattish#readme"
+  "homepage": "https://github.com/rattish/rattish#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
 }

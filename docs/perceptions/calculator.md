@@ -1,0 +1,1 @@
+# operacje arytmetyczne kalkulacji liczbowej
